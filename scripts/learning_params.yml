@@ -1,0 +1,26 @@
+general:
+  use_gpu         : true
+  pre_training    : true
+  loss            : categorical_crossentropy
+  metric          : categorical_accuracy
+  epochs          : 350
+  optimizer       : adam
+  patience        : 1000
+  tr_batch_size   : 38
+  val_batch_size  : 36
+  result_dir      : # the directory where you want to save the results
+  data_dir        : # path to where data is located
+  saved_model_dir : # path to where pre-trained model is saved, it is useful only when pre_training = false
+
+adaptation:
+  epochs           : 300
+  patience         : 1000
+  cls_loss_w       : 10
+  d_lr             : 1e-4
+  tgt_lr           : 1e-4
+  update_controller: 10
+
+test:
+  non_adapted_model_dir: # path to where non adapted model is saved
+  adapted_model_dir    : # path to where adapted model is saved
+  classifier_dir       : # path to where classifier is saved
