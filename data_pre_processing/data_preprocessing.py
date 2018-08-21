@@ -5,16 +5,14 @@ import numpy as np
 import glob
 import yaml
 import pickle
-import random
 from collections import defaultdict
 
 import pandas as pd
 import csv
 
 import os
-from os import path
 
-from aux import printing, file_io
+from aux import printing
 
 from sklearn.preprocessing import LabelEncoder, OneHotEncoder
 from sklearn.model_selection import StratifiedShuffleSplit
@@ -22,6 +20,7 @@ from sklearn.model_selection import StratifiedShuffleSplit
 import torch
 
 __author__ = 'Shayan Gharib -- TUT'
+__docformat__ = 'reStructuredText'
 
 
 def normalizer(feature_matrix, mu, sd):
@@ -204,7 +203,6 @@ def get_data(train_feat, train_cls_labels, train_device_labels, test_feat, test_
 
 
 def main():
-
     """Main function of the data_preprocessing script.
 
     Loading the audio files and extracting the mel band features.
@@ -296,13 +294,16 @@ def main():
                  val_feat, val_scene_labels_name, val_device_labels_name,
                  mean, std, channel, axis, normalize)
 
-    pickle.dump(tr_feat, open(os.path.join(ready_to_use_feat_dir, "training_features.p"), "wb"), protocol=2)
-    pickle.dump(tr_labels, open(os.path.join(ready_to_use_feat_dir, "training_scene_labels.p"), "wb"), protocol=2)
-    pickle.dump(val_feat, open(os.path.join(ready_to_use_feat_dir, "validation_features.p"), "wb"), protocol=2)
-    pickle.dump(val_labels, open(os.path.join(ready_to_use_feat_dir, "validation_scene_labels.p"), "wb"), protocol=2)
-    pickle.dump(test_feat, open(os.path.join(ready_to_use_feat_dir, "test_features.p"), "wb"), protocol=2)
-    pickle.dump(test_labels, open(os.path.join(ready_to_use_feat_dir, "test_scene_labels.p"), "wb"), protocol=2)
+    for obj_to_dump, f_name in zip(
+            [tr_feat, tr_labels, val_feat, val_labels, test_feat, test_labels],
+            ['training_features', 'training_scene_labels', 'validation_features',
+             'validation_scene_labels', 'test_features', 'test_scene_labels']
+    ):
+        with open(os.path.join(ready_to_use_feat_dir, '{}.p'.format(f_name)), 'wb') as f:
+            pickle.dump(obj_to_dump, f, protocol=2)
 
 
 if __name__ == "__main__":
     main()
+
+# EOF

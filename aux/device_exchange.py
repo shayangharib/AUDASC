@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 __author__ = 'Shayan Gharib -- TUT'
+__docformat__ = 'reStructuredText'
 __all__ = ['device_exchange']
 
 

@@ -4,10 +4,18 @@
 from torch import nn
 from torch.nn import functional
 
+__author__ = 'Shayan Gharib, Konstantinos Drossos -- TUT'
+__docformat__ = 'reStructuredText'
+__all__ = ['Model']
+
 
 class Model(nn.Module):
+    """The model M that is used in the AUDASC method.
+    """
 
     def __init__(self):
+        """Initialization of the model M.
+        """
         super(Model, self).__init__()
         self.cnn_1 = nn.Conv2d(
             in_channels=1, out_channels=48,
@@ -44,6 +52,13 @@ class Model(nn.Module):
         self.bn_3 = nn.BatchNorm2d(128)
 
     def forward(self, x):
+        """The forward pass of the model.
+
+        :param x: The input.
+        :type x: torch.Tensor
+        :return: The output of the model.
+        :rtype: torch.Tensor
+        """
         output = self.bn_1(self.max_pool_1(functional.relu(self.cnn_1(x))))
         output = self.bn_2(self.max_pool_2(functional.relu(self.cnn_2(output))))
 

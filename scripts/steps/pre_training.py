@@ -31,7 +31,6 @@ def _training(model, label_classifier, optimizer, tr_feat, tr_labels, batch_size
     :return: The loss and accuracy for the training data.
     :rtype: float, float
     """
-
     assert len(tr_feat) == len(tr_labels)
 
     tr_indices = list(range(len(tr_feat)))
@@ -165,7 +164,6 @@ def pre_training(model, label_classifier, optimizer,
                        and optimizer.
     :type result_dir: dir
     """
-
     patience_count = 0
     best_val_acc = -1
 

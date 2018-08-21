@@ -15,6 +15,8 @@ from modules.label_classifier import LabelClassifier
 from scripts.steps import test_step
 
 __author__ = 'Shayan Gharib -- TUT'
+__docformat__ = 'reStructuredText'
+__all__ = ['testing']
 
 
 def testing(non_adapted_model_dir, adapted_model_dir, classifier_dir, nb_clss_labels,
@@ -128,3 +130,5 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+# EOF

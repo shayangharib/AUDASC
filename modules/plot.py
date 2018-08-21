@@ -6,9 +6,21 @@ import matplotlib
 matplotlib.use('agg')
 import matplotlib.pyplot as plt
 
+__author__ = 'Shayan Gharib -- TUT'
+__docformat__ = 'reStructuredText'
+__all__ = ['plot_function']
+
 
 def plot_function(loss, accuracy, result_dir):
+    """A function to plot training and evaluation metrics.
 
+    :param loss: The loss to be plotted.
+    :type loss: dict[str, float]
+    :param accuracy: The accuracy
+    :type accuracy: dict[str, float]
+    :param result_dir: The output directory for the plots.
+    :type result_dir: str
+    """
     plt.plot(loss['mapping'])
     plt.plot(loss['adversarial'])
     plt.plot(loss['class'])

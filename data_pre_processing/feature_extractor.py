@@ -10,12 +10,12 @@ import os
 from os import path
 
 import scipy
-from scipy.signal.windows import *
 
 import soundfile as sf
 import librosa
 
 __author__ = 'Shayan Gharib -- TUT'
+__docformat__ = 'reStructuredText'
 
 
 def spectrogram(y, n_fft=1024, win_length=0.04, hop_length=0.02, window=scipy.signal.hamming(1024, sym=False),
@@ -55,7 +55,6 @@ def spectrogram(y, n_fft=1024, win_length=0.04, hop_length=0.02, window=scipy.si
 
 
 def main():
-    
     """Main function of the feature_extractor script.
 
     Loading the audio files and extracting the mel band features.
@@ -127,10 +126,8 @@ def main():
                         'std': np.std(feature_matrix.T, axis=0)
             })
 
-        pickle.dump({
-            'feat': feature_matrix_container,
-            'stat': stat_container
-        }, open(path.join(feature_set_dir, smpl.split('/')[-1].replace('.wav', '.p')), "wb"), protocol=2)
+        with open(path.join(feature_set_dir, smpl.split('/')[-1].replace('.wav', '.p')), 'wb') as f_name:
+            pickle.dump({'feat': feature_matrix_container, 'stat': stat_container}, f_name, protocol=2)
 
     with open(path.join(feature_set_dir, 'feature_set_params.yaml'), 'w') as f:
         yaml.dump(
