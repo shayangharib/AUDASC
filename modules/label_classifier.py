@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 from torch import nn
 from torch.nn import functional
 
@@ -23,3 +26,5 @@ class LabelClassifier(nn.Module):
             output = self.dropouts[i](functional.relu(self.linear_layers[i](output)))
 
         return self.output_layer(output)
+
+# EOF

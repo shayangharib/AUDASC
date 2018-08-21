@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 import os
 import matplotlib
 matplotlib.use('agg')
@@ -31,3 +34,5 @@ def plot_function(loss, accuracy, result_dir):
     plt.legend(['source', 'target', 'weighted', 'val_source', 'val_target', 'val_weighted'], loc='upper right')
     plt.savefig(os.path.join(result_dir, 'accuracy_plot.png'), dpi=600)
     plt.close()
+
+# EOF

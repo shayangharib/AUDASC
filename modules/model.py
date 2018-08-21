@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 from torch import nn
 from torch.nn import functional
 
@@ -50,3 +53,4 @@ class Model(nn.Module):
 
         return output
 
+# EOF
