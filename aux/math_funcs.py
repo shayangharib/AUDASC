@@ -1,8 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-# imports
-
 __author__ = 'Shayan Gharib, Konstantinos Drossos -- TUT'
 __docformat__ = 'reStructuredText'
 __all__ = ['avg', 'to_percentage', 'weighting_factors']

@@ -7,7 +7,7 @@ import pickle
 
 import torch
 
-__author__ = 'Konstantinos Drossos'
+__author__ = 'Konstantinos Drossos -- TUT'
 __docformat__ = 'reStructuredText'
 __all__ = ['load_pickled_features', 'save_pytorch_model']
 

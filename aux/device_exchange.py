@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-__author__ = 'Shayan Gharib'
+__author__ = 'Shayan Gharib -- TUT'
 __all__ = ['device_exchange']
 
 
@@ -17,3 +17,5 @@ def device_exchange(data, device):
         data[key] = value.to(device)
 
     return data
+
+# EOF
