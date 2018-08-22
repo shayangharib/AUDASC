@@ -6,9 +6,8 @@ Full description of the method along with obtained
 results can be found at the corresponding [paper](https://arxiv.org/abs/1808.05777). The paper is submitted to the [Detection
 and Classification of Acoustic Scenes and Events workshop (DCASE)](http://dcase.community/) 2018.
 
-Pre-trained weights are at 
-
-Pre-extracted features are at  
+Pre-trained weights and pre-extracted features are at 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1164585.svg)](https://zenodo.org/record/1401995#.W31Zaxx9iK4)
 
 ## How to set up AUDASC
 
