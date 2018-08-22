@@ -32,7 +32,7 @@ Torch
 
 To change the setup of both files, you can use data_pre_processing/feature_params.yml
 
-### Training and test procedures
+## Training and test procedures
 The setup of pre-training, adaptation, and test can be assigned and changed using scripts/learning_params.yml
 ### Pre_training and adaptation
 To train the model on source domain data and adapt the pre-trained model, you need to run 
