@@ -9,7 +9,9 @@ and Classification of Acoustic Scenes and Events workshop (DCASE)](http://dcase.
 Pre-trained weights together with extracted features and labels are at 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1164585.svg)](https://zenodo.org/record/1401995#.W31Zaxx9iK4)
 
-This project is implemented using [PyTorch](https://pytorch.org/)
+This project is implemented using [PyTorch](https://pytorch.org/). 
+
+The ADDA method, which our method is based upon, can be found [here](https://github.com/erictzeng/adda).  
 
 ## How to set up AUDASC
 
