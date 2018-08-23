@@ -14,6 +14,19 @@ This project is implemented using [PyTorch](https://pytorch.org/)
 ## How to set up AUDASC
 
 ### Clone repository and setup project
+To use the AUDASC code, you can clone this repository, 
+setup the paths in the `data_pre_processing/feature_params.yml` file, and 
+install the dependencies. 
+
+Then you can choose either to do the whole procedure again (i.e. extract the features from 
+the audio files, pre-process the features, and apply the AUDASC method) or you can just use
+our pre-extracted features (located at 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1164585.svg)](https://zenodo.org/record/1401995#.W31Zaxx9iK4))
+and apply the AUDASC method. 
+
+Below you can find simple directions for any of the above steps. If there are any questions, 
+please do not hesitate to communicate with us through the issues section of this repository. 
+  
 
 ### Dependencies
 If you are going to use the feature extraction part of this repository you need the following libraries:
