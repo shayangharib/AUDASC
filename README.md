@@ -18,13 +18,19 @@ This project is implemented using [PyTorch](https://pytorch.org/)
 ### Dependencies
 If you are going to use the feature extraction part of this repository you need the following libraries:
 ```
-LibROSA
-PySoundFile
-scikit-learn
+LibROSA 0.6.2
+PySoundFile 0.9.0
+Scikit-learn 0.19.1
+Scipy 1.1.0
+numpy 1.14.5
+pandas 0.23.4
+yaml 0.1.7
 ```
 To run the core method, following is necessary:
 ```
-Torch
+Torch 0.4.0
+yaml 0.1.7
+matplotlib 2.2.2
 ```
 ## Extract and pre-process features
 * To extract the features, you can use data_pre_processing/feature_extractor.py.
@@ -35,7 +41,7 @@ To change the setup of both files, you can use data_pre_processing/feature_param
 ## Training and test procedures
 The setup of pre-training, adaptation, and test can be assigned and changed using scripts/learning_params.yml
 ### Pre_training and adaptation
-To train the model on source domain data and adapt the pre-trained model, you need to run 
+To train the model on source domain data and adapt the pre-trained model to target domain dataset, you need to run 
 scripts/training.py
 
 ### Test the adapted model
