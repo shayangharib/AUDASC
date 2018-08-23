@@ -1,9 +1,9 @@
 general:
-  audio_files_dir      : # local path/audio
+  audio_files_dir      : # local path to load/audio
   feature_set_dir      : # local-path-to-save/features
   test_setup           : # path-to-local-directory/evaluation_setup/fold1_test.txt
   meta_file_dir        : # path-to-meta-directory/meta.csv
-  ready_to_use_feat_dir: # directory where you want to save the results of data preprocessing
+  ready_to_use_feat_dir: # directory where you want to save the results of data_preprocessing.py
 
 feature:
   sampling_rate   : 44100

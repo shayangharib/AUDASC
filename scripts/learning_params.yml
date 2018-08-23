@@ -9,7 +9,7 @@ general:
   tr_batch_size   : 38
   val_batch_size  : 36
   result_dir      : # the directory where you want to save the results
-  data_dir        : # path to where data is located
+  data_dir        : # path to where features and labels of training, validation, and test are located
   saved_model_dir : # path to where pre-trained model is saved, it is useful only when pre_training = false
 
 adaptation:
