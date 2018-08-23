@@ -18,33 +18,34 @@ This project is implemented using [PyTorch](https://pytorch.org/)
 ### Dependencies
 If you are going to use the feature extraction part of this repository you need the following libraries:
 ```
-LibROSA 0.6.2
-PySoundFile 0.9.0
-Scikit-learn 0.19.1
-Scipy 1.1.0
-numpy 1.14.5
-pandas 0.23.4
-yaml 0.1.7
+librosa>=0.6.2
+pysoundfile>=0.9.0
+scikit-learn>=0.19.1
+scipy>=1.1.0
+numpy>=1.14.5
+pandas>=0.23.4
+yaml>=0.1.7
 ```
 To run the core method, following is necessary:
 ```
-Torch 0.4.0
-yaml 0.1.7
-matplotlib 2.2.2
+torch>=0.4.0
+yaml>=0.1.7
+matplotlib>=2.2.2
 ```
 ## Extract and pre-process features
-* To extract the features, you can use data_pre_processing/feature_extractor.py.
+* To extract the features, you can use `data_pre_processing/feature_extractor.py`.
 * To prepare the features and labels as input to the model, you can use data_pre_processing/data_preprocessing.py
 
-To change the setup of both files, you can use data_pre_processing/feature_params.yml
+To change the setup of both files, you can use `data_pre_processing/feature_params.yml`
 
 ## Training and test procedures
-The setup of pre-training, adaptation, and test can be assigned and changed using scripts/learning_params.yml
-### Pre_training and adaptation
+The setup of pre-training, adaptation, and test can be assigned and changed using `scripts/learning_params.yml`
+
+### Pre-training and adaptation
 To train the model on source domain data and adapt the pre-trained model to target domain dataset, you need to run 
-scripts/training.py
+`scripts/training.py`
 
 ### Test the adapted model
 To test the adapted as well as non adapted model on source and target data, you simply need to run 
-scripts/test.py
+`scripts/test.py`
 
